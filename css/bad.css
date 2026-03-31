@@ -1,0 +1,179 @@
+body {
+    margin: 0 1%;
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+html {
+    /*background-color: rgb(0, 0, 0);*/
+    background-color: rgb(255, 255, 255);
+}
+
+/* TYPOGRAPHY */
+/* TYPOGRAPHY */
+
+h1 {
+    font-weight: 100;
+}
+
+/* TYPOGRAPHY */
+/* TYPOGRAPHY */
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+
+header {
+    position: fixed;
+    top: 1%;
+    width: 100%;
+}
+
+.nav-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    column-gap: 0.5em;
+    justify-content: space-between;
+} 
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clock {
+    white-space: nowrap;
+}
+
+.blank {
+    grid-column: span 7;
+}
+
+/*ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    text-align: center;
+  
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: baseline;
+}8?
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+
+/* RULER */
+/* RULER */
+
+.ruler {
+    display: grid;
+    grid-template-columns: repeat(1000, 10vw);
+    column-gap: 1em;
+}
+
+.ruler-start::after,
+.ruler-start::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 40px;
+    background-color: black;
+}
+
+.ruler-mid::after,
+.ruler-mid::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 30px;
+    background-color: black;
+}
+
+.ruler-line::before,
+.ruler-line::after {
+    content: "";
+    position: absolute;
+    /*top: 0;*/
+    bottom: 0;
+    width: 1px;
+    height: 20px;
+    background-color: black;
+}
+
+.guide-line {
+    position:absolute;
+    width: 1px;
+    background-color: black;
+    top:0;
+    bottom:0;
+    left: 5%;
+}
+
+/* RULER */
+/* RULER */
+
+/* EVENTS */
+/* EVENTS */
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /*width: 100000vw;*/
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(1000, 10vw);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 1em;
+    align-items: baseline;
+
+    margin-top: 5em;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+}
+
+#longbox {
+    background-color: rgb(126, 233, 120);
+    grid-column: span 7;
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(1000, 100vw);
+    column-gap: 10em;
+    align-items: start;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#event-9 {
+    display: grid;
+    grid-template-columns: repeat(9,10vw);
+    column-gap:1em;
+}
+
+#filler-box1 {
+    grid-column: span 250;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Timeline</title>
+    
+      <link rel="stylesheet" href="css/style.css">
+
+      <style>
+        :root {
+            --tick-gap: calc(10vw + 1em);
+            --major-gap: calc(50vw + 5em);
+        }
+
+        
+        .ruler {
+            bottom: 0;
+            height: 30px;
+            width: 100%;
+            position: absolute;
+
+            background-image:
+                /* major ticks */
+                /*repeating-linear-gradient(
+                to right,
+                black 0px,
+                black 3px,
+                transparent 3px,
+                transparent var(--major-gap)
+                ),*/
+
+                /* minor ticks */
+                repeating-linear-gradient(
+                to right,
+                black 0px,
+                black 1px,
+                transparent 1px,
+                transparent var(--tick-gap)
+                );
+        };
+        
+      </style>
+</head>
+<body>
+
+    
+    <div class="wrapper"> <!--encompasses entire page-->
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="" class="clock"id="clock"></a>
+                    <div class="blank"></div>
+                    <a href="">∞</a>
+                    <a href="">×</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container"> <!--encompasses all of the scrollable content-->
+            <div class="guideline">
+
+            </div>
+
+            <div class="year-grid">
+                <div class="year" id="past"><h1>540</h1></div>
+                <div class="year"><h1>550</h1></div>
+                <div class="year"><h1>560</h1></div>
+                <div class="year"><h1>570</h1></div>
+                <div class="year"><h1>580</h1></div>
+                <div class="year"><h1>590</h1></div>
+                <div class="year"><h1>600</h1></div>
+                <div class="year"><h1>610</h1></div>
+                <div class="year"><h1>620</h1></div>
+                <div class="year"><h1>630</h1></div>
+                <div class="year"><h1>640</h1></div>
+                <div class="year"><h1>650</h1></div>
+                <div class="year"><h1>660</h1></div>
+                <div class="year"><h1>670</h1></div>
+                <div class="year"><h1>680</h1></div>
+                <div class="year"><h1>690</h1></div>
+                <div class="year"><h1>700</h1></div>
+                <div class="year"><h1>710</h1></div>
+                <div class="year"><h1>720</h1></div>
+                <div class="year"><h1>730</h1></div>
+                <div class="year"><h1>740</h1></div>
+                <div class="year"><h1>750</h1></div>
+                <div class="year"><h1>760</h1></div>
+                <div class="year"><h1>770</h1></div>
+                <div class="year"><h1>780</h1></div>
+                <div class="year"><h1>790</h1></div>
+                <div class="year"><h1>800</h1></div>
+            </div>
+
+            <div class="event-grid">
+                <div class="box"></div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                    <p> Plague of Justinian (541–549): the first episode of the first plague pandemic</p>
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+
+                    <div>
+                        <p>Sack of Rome (546)</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_justinianplague.jpg">
+                </div>
+
+                <div class="box" id="filler1"></div>
+                <div class="box">
+                    <img src="images/capricorn_firstviking.jpg">
+                    <p>The Sacking of Lindisfarne (793): The first viking raid</p>
+                </div>
+                
+            </div>
+       
+            <div class="ruler"></div>
+            <div class="ruler-grid">
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+                <div class="ruler-start"></div>
+            </div>
+        </div>
+    </div>
+
+
+     <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const container = document.querySelector(".container");
+
+        gsap.to(container, {
+        x: () => -(container.scrollWidth - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".wrapper",
+            pin: true,
+            scrub: 1,
+            end: () => "+=" + container.scrollWidth,
+        }
+        });
+
+        gsap.to(".guideline", {
+            scrollTrigger: {
+                trigger: ".guideline",
+                markers: true,
+
+                start: "top center",
+                end: "bottom 500px",
+                scrub: 1,
+                pin: true,
+                horizontal: true,
+                toggleActions: "restart pause reverse pause",
+            },
+            x: 500,
+            duration: 5
+        });
+    </script>
+</body>
+</html>
