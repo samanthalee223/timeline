@@ -32,21 +32,7 @@ setInterval(updateClock, 1000);
 
 
 
-// ANIMATIONS
-
-//gsap.to(".guide-line", {
-     //scrollTrigger: {
-          //trigger: '.guide-line', // start animation when ".box" enters the viewport
-          //toggleActions: "restart pause resume none",
-          //start: "100px",
-          //end: "1000px",
-          ////pin: true,
-          //markers: true,
-          //scrub: 1,
-          //horizontal: true,
-     //},
-     //x: 1000
-//});
+// SCROLL
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,9 +42,34 @@ gsap.to(container, {
   x: () => -(container.scrollWidth - window.innerWidth),
   ease: "none",
   scrollTrigger: {
+    id: "horizontalScroll",
     trigger: ".wrapper",
     pin: true,
-    scrub: 2,
+    scrub: 1,
     end: () => "+=" + container.scrollWidth
   }
+});
+
+
+const st = ScrollTrigger.getById("horizontalScroll");
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    const offset = target.offsetLeft;
+
+    gsap.to(window, {
+      scrollTo: {
+        y: st.start + offset
+      },
+      duration: 1,
+      ease: "power2.inOut"
+    });
+  });
 });

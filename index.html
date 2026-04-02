@@ -6,56 +6,23 @@
     <title>The Timeline</title>
     
       <link rel="stylesheet" href="css/style.css">
-
-      <style>
-        :root {
-            --tick-gap: calc(10vw + 1em);
-            --major-gap: calc(50vw + 5em);
-        }
-
-        
-        .ruler {
-            bottom: 0;
-            height: 30px;
-            width: 100%;
-            position: absolute;
-
-            background-image:
-                /* major ticks */
-                /*repeating-linear-gradient(
-                to right,
-                black 0px,
-                black 3px,
-                transparent 3px,
-                transparent var(--major-gap)
-                ),*/
-
-                /* minor ticks */
-                repeating-linear-gradient(
-                to right,
-                black 0px,
-                black 1px,
-                transparent 1px,
-                transparent var(--tick-gap)
-                );
-        };
-        
-      </style>
 </head>
 <body>
 
-    
-    <div class="wrapper"> <!--encompasses entire page-->
-        <header>
+    <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="" class="clock"id="clock"></a>
-                    <div class="blank"></div>
-                    <a href="">∞</a>
-                    <a href="">×</a>
+                    <a href="#past">past</a>
+                    <a href="#present">present</a>
+                    <a href="#future" id="nav-span1">future</a>
+                    <a href="index.html" class="clock"id="clock"></a>
+                    <a href="eternalreturn.html">the eternal return</a>
+                    <a href="y2k38.html">y2k38.fail</a>
                 </div>
             </nav>
         </header>
+    
+    <div class="wrapper"> <!--encompasses entire page-->
 
         <div class="container"> <!--encompasses all of the scrollable content-->
             <div class="guideline">
@@ -63,7 +30,7 @@
             </div>
 
             <div class="year-grid">
-                <div class="year" id="past"><h1>540</h1></div>
+                <div class="year"><h1>540</h1></div>
                 <div class="year"><h1>550</h1></div>
                 <div class="year"><h1>560</h1></div>
                 <div class="year"><h1>570</h1></div>
@@ -90,13 +57,155 @@
                 <div class="year"><h1>780</h1></div>
                 <div class="year"><h1>790</h1></div>
                 <div class="year"><h1>800</h1></div>
+                <div class="year"><h1>810</h1></div>
+                <div class="year"><h1>820</h1></div>
+                <div class="year"><h1>830</h1></div>
+                <div class="year"><h1>840</h1></div>
+                <div class="year"><h1>850</h1></div>
+                <div class="year"><h1>860</h1></div>
+                <div class="year"><h1>870</h1></div>
+                <div class="year"><h1>880</h1></div>
+                <div class="year"><h1>890</h1></div>
+                <div class="year"><h1>900</h1></div>
+                <div class="year"><h1>910</h1></div>
+                <div class="year"><h1>920</h1></div>
+                <div class="year"><h1>930</h1></div>
+                <div class="year"><h1>940</h1></div>
+                <div class="year"><h1>950</h1></div>
+                <div class="year"><h1>960</h1></div>
+                <div class="year"><h1>970</h1></div>
+                <div class="year"><h1>980</h1></div>
+                <div class="year"><h1>990</h1></div>
+                <div class="year"><h1>1000</h1></div>
+                <div class="year"><h1>1010</h1></div>
+                <div class="year"><h1>1020</h1></div>
+                <div class="year"><h1>1030</h1></div>
+                <div class="year"><h1>1040</h1></div>
+                <div class="year"><h1>1050</h1></div>
+                <div class="year"><h1>1060</h1></div>
+                <div class="year"><h1>1070</h1></div>
+                <div class="year"><h1>1080</h1></div>
+                <div class="year"><h1>1090</h1></div>
+                <div class="year"><h1>1100</h1></div>
+                <div class="year"><h1>1110</h1></div>
+                <div class="year"><h1>1120</h1></div>
+                <div class="year"><h1>1130</h1></div>
+                <div class="year"><h1>1140</h1></div>
+                <div class="year"><h1>1150</h1></div>
+                <div class="year"><h1>1160</h1></div>
+                <div class="year"><h1>1170</h1></div>
+                <div class="year"><h1>1180</h1></div>
+                <div class="year"><h1>1190</h1></div>
+                <div class="year"><h1>1200</h1></div>
+                <div class="year"><h1>1210</h1></div>
+                <div class="year"><h1>1220</h1></div>
+                <div class="year"><h1>1230</h1></div>
+                <div class="year"><h1>1240</h1></div>
+                <div class="year"><h1>1250</h1></div>
+                <div class="year"><h1>1260</h1></div>
+                <div class="year"><h1>1270</h1></div>
+                <div class="year"><h1>1280</h1></div>
+                <div class="year"><h1>1290</h1></div>
+                <div class="year"><h1>1300</h1></div>
+                <div class="year"><h1>1310</h1></div>
+                <div class="year"><h1>1320</h1></div>
+                <div class="year"><h1>1330</h1></div>
+                <div class="year"><h1>1340</h1></div>
+                <div class="year"><h1>1350</h1></div>
+                <div class="year"><h1>1360</h1></div>
+                <div class="year"><h1>1370</h1></div>
+                <div class="year"><h1>1380</h1></div>
+                <div class="year"><h1>1390</h1></div>
+                <div class="year"><h1>1400</h1></div>
+                <div class="year"><h1>1410</h1></div>
+                <div class="year"><h1>1420</h1></div>
+                <div class="year"><h1>1430</h1></div>
+                <div class="year"><h1>1440</h1></div>
+                <div class="year"><h1>1450</h1></div>
+                <div class="year"><h1>1460</h1></div>
+                <div class="year"><h1>1470</h1></div>
+                <div class="year"><h1>1480</h1></div>
+                <div class="year"><h1>1490</h1></div>
+                <div class="year"><h1>1500</h1></div>
+                <div class="year"><h1>1510</h1></div>
+                <div class="year"><h1>1520</h1></div>
+                <div class="year"><h1>1530</h1></div>
+                <div class="year"><h1>1540</h1></div>
+                <div class="year"><h1>1550</h1></div>
+                <div class="year"><h1>1560</h1></div>
+                <div class="year"><h1>1570</h1></div>
+                <div class="year"><h1>1580</h1></div>
+                <div class="year"><h1>1590</h1></div>
+                <div class="year"><h1>1600</h1></div>
+                <div class="year"><h1>1610</h1></div>
+                <div class="year"><h1>1620</h1></div>
+                <div class="year"><h1>1630</h1></div>
+                <div class="year"><h1>1640</h1></div>
+                <div class="year"><h1>1650</h1></div>
+                <div class="year"><h1>1660</h1></div>
+                <div class="year"><h1>1670</h1></div>
+                <div class="year"><h1>1680</h1></div>
+                <div class="year"><h1>1690</h1></div>
+                <div class="year"><h1>1700</h1></div>
+                <div class="year"><h1>1710</h1></div>
+                <div class="year"><h1>1720</h1></div>
+                <div class="year"><h1>1730</h1></div>
+                <div class="year"><h1>1740</h1></div>
+                <div class="year"><h1>1750</h1></div>
+                <div class="year"><h1>1760</h1></div>
+                <div class="year"><h1>1770</h1></div>
+                <div class="year"><h1>1780</h1></div>
+                <div class="year"><h1>1790</h1></div>
+                <div class="year"><h1>1800</h1></div>
+                <div class="year"><h1>1810</h1></div>
+                <div class="year"><h1>1820</h1></div>
+                <div class="year"><h1>1830</h1></div>
+                <div class="year"><h1>1840</h1></div>
+                <div class="year"><h1>1850</h1></div>
+                <div class="year"><h1>1860</h1></div>
+                <div class="year"><h1>1870</h1></div>
+                <div class="year"><h1>1880</h1></div>
+                <div class="year"><h1>1890</h1></div>
+                <div class="year"><h1>1900</h1></div>
+                <div class="year"><h1>1910</h1></div>
+                <div class="year"><h1>1920</h1></div>
+                <div class="year"><h1>1930</h1></div>
+                <div class="year"><h1>1940</h1></div>
+                <div class="year"><h1>1950</h1></div>
+                <div class="year"><h1>1960</h1></div>
+                <div class="year"><h1>1970</h1></div>
+                <div class="year"><h1>1980</h1></div>
+                <div class="year"><h1>1990</h1></div>
+                <div class="year-stretch"><h1>01.2000</h1></div>
+                <div class="year"><h1>02.2000</h1></div>
+                <div class="year"><h1>03.2000</h1></div>
+                <div class="year"><h1>04.2000</h1></div>
+                <div class="year"><h1>05.2000</h1></div>
+                <div class="year"><h1>06.2000</h1></div>
+                <div class="year"><h1>07.2000</h1></div>
+                <div class="year"><h1>08.2000</h1></div>
+                <div class="year"><h1>09.2000</h1></div>
+                <div class="year"><h1>10.2000</h1></div>
+                <div class="year"><h1>11.2000</h1></div>
+                <div class="year"><h1>12.2000</h1></div>
+                <div class="year"><h1>2001</h1></div>
+                <div class="year"><h1>2010</h1></div>
+                <div class="target" id="present"><h1>2020</h1></div>
+                <div class="target" id="present"><h1>01.2026</h1></div>
+                <div class="target" id="present"><h1>02.2026</h1></div>
+                <div class="target" id="present"><h1>03.2026</h1></div>
+                <div class="target" id="present"><h1>04.2026</h1></div>
+                <div class="target" id="present"><h1>05.2026</h1></div>
+                <div class="target" id="future"><h1>2030</h1></div>
             </div>
 
             <div class="event-grid">
+                <!--THE PAST-->
+
                 <div class="box"></div>
                 <div class="box">
                     <img src="images/capricorn_justinianplague.jpg">
-                    <p> Plague of Justinian (541–549): the first episode of the first plague pandemic</p>
+                    <p> Plague of Justinian (541–549): the first episode of the first plague pandemic.</p>
                 </div>
                 <div class="box">
                     <img src="images/capricorn_justinianplague.jpg">
@@ -127,59 +236,498 @@
                     <img src="images/capricorn_justinianplague.jpg">
                 </div>
 
-                <div class="box" id="filler1"></div>
+                <div class="box" id="filler1">
+                    <a href="#jumplink1">Jump to next event --></a>
+                    <a href="#jumplink2">Jump to present --></a>
+
+                </div>
+
                 <div class="box">
-                    <img src="images/capricorn_firstviking.jpg">
-                    <p>The Sacking of Lindisfarne (793): The first viking raid</p>
+                    <img src="images/capricorn_firstviking.jpg" class="target" id="jumplink1">
+                    <p>The Sacking of Lindisfarne (793): The first viking raid.</p>
+                </div>
+
+                <div class="box" id="filler2"></div>
+
+                <div class="box">
+                    <p>East–West Schism (1054): separation of the Catholic Church and the Eastern Orthodox Church.</p>
+
+                    <img src="images/aquarius_sn1054.jpg">
+                    <p> SN 1054 The Crab Supernova (07.04.1054): the first recorded supernova.</p>
+                </div>
+
+                <div class="box" id="filler3"></div>
+
+                <div class="box">
+                    <img src="images/aquarius_edictofexplusion.jpg">
+                    <p>Edict of Expulsion (1290): Royal decree expelling all Jews from the Kingdom of England.</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/aquarius_siegeacre.jpg">
+                    <p>Siege of Acre (1291): the fall of the last crusader states.</p>
+                </div>
+
+                <div class="box" id="filler4"></div>
+
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                    <p>Black Plague (1346 – 1353)</p>
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aries_blackplague.jpg">
+                </div>
+
+                <div class="box" id="filler5"></div>
+
+                <div class="box">
+                    <p>Shakespeare's Sonnet 123 is published (1609).</p>
+                </div>
+
+                <div class="box" id="filler6"></div>
+
+                <div class="box">
+                    <img src="images/taurus_firstafricans.jpg">
+                    <p>The first Africans were brought to the American continent as slaves (08.20.1619).</p>
+                </div>
+
+                <div class="box" id="filler7"></div>
+
+                <div class="box">
+                    <img src="images/capricorn_russianplague.jpg">
+                    <p>Russian Plague (02.1771) – Jupiter and Pluto conjunct in Capricorn.</p>
+                </div>
+
+                <div class="box" id="filler8"></div>
+
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                    <p>The American Revolutionary War (1775-1783)</p>
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                    <p></p>
+
+                    <img src="images/capricorn_decindependence.jpg">
+                    <p>Declaration of Independence (07.04.1776)</p>
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                    <p></p>
+
+                    <img src="images/">
+                    <p>Discovery of Uranus (03.13.1781)</p>
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/capricorn_revolutionarywar.jpg">
+                </div>
+
+                <div class="box" id="filler9"></div>
+
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                    <p>The French Revolution (1789-1799)</p>
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/aquarius_frenchrevolution.jpg">
+                </div>
+
+                <div class="box" id="filler10"></div>
+
+                <div class="box">
+                    <img src="images/taurus_civilwar.jpg">
+                    <p>The American Civil War (1861–1865)</p>
+                </div>
+                <div class="box">
+                    <img src="images/taurus_civilwar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/taurus_civilwar.jpg">
+                    <p></p>
+
+                    <img src="images/taurus_emancipation.jpg">
+                    <p>Emancipation Proclamation (1863) – Granted freedom to Americans in slavery.</p>
+                </div>
+                <div class="box">
+                    <img src="images/taurus_civilwar.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/taurus_civilwar.jpg">
+                </div>
+
+                <div class="box" id="filler11"></div>
+
+                <div class="box">
+                    <p>On the Phenomena of Historical Repetition: A Study of the Relation of Historical to Scientific Research by Benjamin W. Richardson is published (1877).</p>
+                </div>
+
+                <div class="box" id="filler12"></div>
+
+                <div class="box">
+                    <img src="images/cancer_ww1.jpg">
+                    <p>World War 1 (1914-1918)</p>
+                </div>
+                <div class="box">
+                    <img src="images/cancer_ww1.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/cancer_ww1.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/cancer_ww1.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/cancer_spanishflu.jpg">
+                    <p>Spanish Flu (1918-1920) – Jupiter & Pluto conjunct in Cancer.</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/cancer_spanishflu.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/cancer_spanishflu.jpg">
+                    <p></p>
+                    <img src="images/cancer_19thamendment.jpg">
+                    <p>19th Amendment (1920) – Women granted the right to vote.</p>
+                </div>
+
+                <div class="box" id="filler6"></div>
+
+                <div class="box">
+                    <img src="images/cancer_plutodiscovery.jpg">
+                    <p>The Discovery of Pluto (1930)</p>
+                </div>
+
+                <div class="box" id="filler13"></div>
+
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                    <p>World War II (1939-1945)</p>
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+                <div class="box">
+                    <img src="images/leo_ww2.jpg">
+                </div>
+
+                <div class="box" id="filler14"></div>
+
+                <div class="box">
+                    <img src="images/libra_hiv.jpg">
+                    <p>HIV/AIDS Outbreak – Jupiter & Pluto conjunct in Libra (09.1981-11.1981)</p>
+                </div>
+
+                <div class="box" id="filler15"></div>
+
+                <div class="box-stretch">
+                    <p>Three airports in Sweden unable to create temporary passports due to computer bug (01.02.1999)</p>
+                    <p>HUNDREDS OF TAXIS BREAK DOWN IN SINGAPORE, CAUSING DISASTROUS CRASHES (01.12.1999)</p>
+                    <p>SWEDISH TAXI RIDERS CHARGED $7 MILLION DUE TO COMPUTER BUG (01.12.1999)</p>
+                    <p>OSWEGO, ILLINOIS CHARGED A $7 MILLION ELECTRIC BILL DUE TO COMPUTER BUG (03.06.1999)</p>
+                    <p>Date Switch in a Pennsylvania Nuclear Plant Causes Outages Across the State for 7 Days! (03.06.1999)</p>
+                    <p>As many as 500 people got notices telling them to show up for jury duty in 1900 due to computer bug (11.28.1999)</p>
+                    <p>20,000 Credit Card Machines Fail! (12.30.1999)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>Y2K (01.01.2000) – THE ALMOST END OF THE WORLD</p>
+                    <p>150 Delaware Lottery racino slot machines stop working (01.01.2000)</p>
+                    <p>AIR TRAFFIC CONTROL SYSTEM IN JAPAN BREAKS! PROBLEM PERSISTS FOR DAYS (01.01.2000)</p>
+                    <p>Bus ticket validation system in Australia fail to operate (01.01.2000)</p>
+                    <p>JAPANESE NUCLEAR POWER PLANTS MALFUNCTION! DISASTROUS IMPLICATIONS!! (01.01.2000)</p>
+                    <p>RAILTRACK WEBSITE REPORTS THAT NO TRAINS RUNNING IN THE UK DUE TO EPOCHALYPSE! (01.01.2000)</p>
+                    <p>Reports of phone jamming in Brazil, Japan, Macedonia, Italy and the UK due to Y2K38 (01.01.2000)!</p>
+                    <p>THE EPOCHALYPSE LEAVES CANADA’S DEFENCE OFFICE SAFE ROOMS LEFT VULNERABLE (01.01.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>Japan’s largest cellular operator reports newest text messages being deleted. CONTACT YOUR LOVED ONES BEFORE IT’S TOO LATE! (01.02.2000)</p>
+                    <p>90,000+ APARTMENTS WITHOUT HEATING OR HOT WATER IN SEOUL FOR DAYS (01.02.2000)</p>
+                    <p>THREE DIALYSIS MACHINES FAIL IN EGYPT (01.02.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>HUNDREDS OF TRAFFIC LIGHTS MALFUNCTION IN JAMAICA!!!!! (01.03.2000)</p>
+                    <p>Video stores across New York charge $91,250 late fee! (01.03.2000)</p>
+                    <img src="images/y2k-bug-1.jpg">
+                    <p>Display bug at train station! (01.03.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>A newborn baby's age was recorded as 100 years old at a hospital near Seoul after the computer malfunctioned in the transition to 2000. (01.04.2000)</p>
+                    <p>Bank accidentally transfers $6.2 million to a customer with a statement date of 30 December 1899 (01.04.2000)</p>
+                    <p>Bureau of Alcohol, Tobacco, Firearms and Explosives unable to register new firearms dealers for several days! (01.04.2000)</p>
+                    <p>Four hospital patients in the southeastern city of Taegu were issued medical fee receipts dated Jan. 1, 1900. (01.04.2000)</p>
+                    <p>Thousands of taxi meters fail in Jiangsu, China. (01.04.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>THE EPOCHALYPSE DISABLES THE PENTAGON'S TERRORIST THREAT MONITORING SOFTWARE! (01.05.2000)</p>
+                    <p>TRAINS GO ROGUE IN MALI AS TRAIN TRACKING SOFTWARE BREAKS DOWN!!! THOUSANDS OF PASSENGERS STRANDED FOR DAYS!!! (01.05.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>30,000 OF GREECE’S CASH REGISTERS HAVE BEGUN PRINTING RECEIPTS DATED 1900!! (01.06.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>Bank in Chicago unable to process electronic Medicare payments for months! (01.07.2000)</p>
+                    <p>MasterCard and Visa report that thousands of customers are being charged multiple times for transactions! (01.07.2000)</p>
+                </div>
+
+                <div class="box-stretch"></div>
+                <div class="box-stretch"></div>
+                <div class="box-stretch"></div>
+
+                <div class="box-stretch">
+                    <p>THE FRENCH GOVERNMENT’S SECRET IS EXPOSED! THE EPOCHALYPSE CAUSES FRENCH SPY SATELLITES TO FALL OUT OF THE SKY!! (01.10.2000)</p>
+                </div>
+
+                <div class="box-stretch"></div>
+                <div class="box-stretch"></div>
+
+                <div class="box-stretch">
+                    <p>Y2K fix disrupts U.S. spy satellites for days, not hours (01.13.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>At a nuclear plant in Japan, computer systems that monitor employee work hours shut down!! (02.29.2000)</p>
+                    <p>At Japan's Meteorological Agency, weather monitoring stations reported double-digit rainfall even though no rain fell outside (02.29.2000)</p>
+                    <p>New Zealand government and banks report more than 4,000 failed transfers! (02.29.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>ELDERLY OVER 100 DENIED CARE IN BEDFORDSHIRE AFTER Y2K38 BUG STRIKES!! (04.24.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>GERMAN FAMILIES DENIED GOVERNMENT CHILDCARE! (06.07.2000)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>105 year old woman offered a spot in a Norwegian kindergarten. (2000)</p>
+                    <p>Glitches in Brazil’s Port of Santos and Viracopos International Airport causes massive delays in cargo shipments.(2000)</p>
+                    <p>The year is 19100 according to the U.S Naval Observatory website! (2000)</p>
+                </div>
+
+                <div class="box">
+                    <p>An undiscovered bug led to 154 pregnant women to receive incorrect Down’s syndrome test results. (09.14.2001)</p>
+                </div>
+
+                <div class="box">
+                    <p>The birth of Samantha Lee. (12.23.2005)</p>
                 </div>
                 
+                <div class="box">
+                    <p>AOLserver malfunctions 1 billion seconds before Y2K38 (05.12.2006 01:26:38UTC)</p>
+                </div>
+
+                <div class="box">
+                    <p>DENMARK HOSPITAL REPORTS A 100 YEAR OLD BABY! (06.01.2009)</p>
+                </div>
+
+                <div class="box">
+                    <p>GANGNAM STYLE PREDICTED THE END OF THE WORLD!!!!! (12.16.2014)</p>
+                </div>
+
+                <div class="box">
+                    <p>Will computers be wiped out on 19 January 2038? Outdated PC systems will not be able to cope with time and date, experts warn (12.16.2014)</p>
+                </div>
+
+                <div class="box">
+                    <p>Digital 'Epochalypse' Could Bring World to Grinding Halt (07.28.2017)</p>
+                </div>
+
+                <div class="box">
+                    <p>data poetry / datenpoesie by  jörg piringer is published. (2018)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/real-event-4.jpeg">
+                    <p>Mark Gill stacks cases of water at the Super Walmart off Charlotte Pike to have ready for folks concerned about Y2K38 in Nashville, Tenn. (03.08.2018)</p>
+                </div>
+
+                <div class="box">
+                    <p>BREATHALYZERS BREAK IN HONG KONG: DRUNK DRIVING INCIDENTS SPIKE (12.29.2019)</p>
+                </div>
+
+                <div class="box">
+                    <p>Prisoners in Venice and Naples have 100 years added to their sentences! (12.29.2019)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/capricorn_covid.jpg">
+                    <p>COVID-19 Pandemic (2020-2023)</p>
+                </div>
+
+                <!--THE PRESENT-->
+
+                <div class="box-stretch">
+                    <p>The beginning of GRPH-3018-501 Graphic Design 4. (01.08.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>The assembly of The Eternal Return. (02.04.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>The Eternal Return is installed in the sixth floor open studio of OCAD University's main building. (02.05.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>y2k38.fail launches to the public.(02.28.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>Y2K38 posters spotted across OCAD University's main building (03.09.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>y2k38.fail site presented in room 650. (03.10.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>The Eternal Return is installed in room 664 in OCAD University's main building. (03.26.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <p>The end of GRPH-3018-501 Graphic Design 4. (04.14.2026)</p>
+                </div>
+
+                <div class="box-stretch">
+                    <img src="images/real-event-1.jpeg">
+                    <p>A woman stocks up on supplies in Eugene, Ore. (12.28.2026)</p>
+                </div>
+
+                <!--THE FUTURE-->
+
+                <div class="box">
+                    <p>Legendary Japanese fortune teller reports visions of planes falling out of the sky on January 19, 2038!! (03.03.2035)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/mini-poster3.jpg">
+                    <p>Camera catches strange beam of light at the Louvre! Experts say this is a sign the Y2K38 Epochalypse has begun. (08.04.2037)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/mini-poster-4.jpg">
+                    <p>BREAKING NEWS! Beam of light strikes aircraft! SIMILAR STRANGE PHENOMENA REPORTED ACROSS THE GLOBE!!!!! (11.11.2037)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/real-event-2.jpeg">
+                    <p>Jodi Didier looks over her Y2K storage area at her home using a wind-up flash light. Didier taught a course entitled, "How to Prepare for the Y2K" at Rock Valley College in Rockford, Ill and is now spreading awareness about Y2K38. (02.05.2037)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/real-event-3.jpeg">
+                    <p>A compound in the back of the building at 5312 S Stone Rd. in South Range, Wis., built by families preparing for Y2K and maintained in anticipation for Y2K38. (09.24.2037)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/real-event-6.jpg">
+                    <p>A couple, Tom and Betty O'Connor, packing to move from Seattle to rural Utah before Y2K38. (04.20.2037)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/real-event-5.jpg">
+                    <p>People preparing for Y2K38, stocking up on essential items. (01.18.2038)</p>
+                </div>
+
+                <div class="box">
+                    <img src="images/mini-poster.jpg">
+                    <p>SATELLITES FALL FROM THE SKY! ALL EVIDENCE POINTS TO Y2K38! (01.19.2038)</p>
+                </div>
+
+                <div class="box">
+                    <p>THE END OF THE WORLD (01.19.2038 03:14:08 UTC)</p>
+                </div>
+
+
             </div>
        
             <div class="ruler"></div>
-            <div class="ruler-grid">
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-                <div class="ruler-start"></div>
-            </div>
         </div>
     </div>
 
 
      <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollToPlugin.min .js"></script>
     <script src="js/script.js"></script>
 
     <script>

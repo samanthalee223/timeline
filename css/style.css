@@ -3,11 +3,13 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    color: white;
+    background-color: rgb(15, 15, 15);
 }
 
 .wrapper {
     height: 100vh;
-    width: 10000vw;
+    width: 19000vw;
     overflow: hidden;
 }
 
@@ -17,14 +19,26 @@ h1 {
     font-weight: 100;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    font-style: italic;
+}
+
+
+
 /* TYPOGRAPHY */
 
 /* NAVIGATION BAR */
 
-header {
+nav {
     position: fixed;
     top: 1%;
     width: 100%;
+    z-index: 1000;
 }
 
 .nav-wrapper {
@@ -35,25 +49,16 @@ header {
 
     display: grid;
     grid-template-columns: repeat(10, 10vw);
-    column-gap: 0.5em;
-    justify-content: space-between;
+    column-gap: 1em;
 } 
 
-.nav-wrapper a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: underline;
+#nav-span1 {
+    grid-column: span 2;
 }
 
 .clock {
     white-space: nowrap;
-}
-
-.blank {
-    grid-column: span 7;
+    grid-column: span 3;
 }
 
 
@@ -74,13 +79,18 @@ a:hover {
 .year-grid{
     margin-top: 5vh;
     display: grid;
-    grid-template-columns: repeat(100, 100vw); /* ruler + content */
-    column-gap: 10em;
+    grid-template-columns: repeat(3000, 10vw); /* ruler + content */
+    column-gap: 1em;
+}
+
+.year {
+    grid-column: span 10;
+}
+
+.year-stretch {
+    grid-column: span 60;
 }
 /* YEAR */
-
-
-
 
 
 /* EVENTS */
@@ -88,8 +98,12 @@ a:hover {
 .event-grid {
     margin-top: 15vh;
     display: grid;
-    grid-template-columns: repeat(1000, 10vw); /* ruler + content */
+    grid-template-columns: repeat(2000, 10vw); /* ruler + content */
     column-gap: 1em;
+}
+
+.box-stretch {
+    grid-column: span 2;
 }
 
 
@@ -100,8 +114,64 @@ img {
 
 #filler1 {
     grid-column: span 243;
-    background-color: aquamarine;
 }
+
+#filler2 {
+    grid-column: span 260;
+}
+
+#filler3 {
+    grid-column: span 235;
+}
+
+#filler4 {
+    grid-column: span 54;
+}
+
+#filler5  {
+    grid-column: span 255;
+}
+
+#filler6 {
+    grid-column: span 9;
+}
+
+#filler7 {
+    grid-column: span 151;
+}
+
+#filler8 {
+    grid-column: span 3;
+}
+
+#filler9 {
+    grid-column: span 5;
+}
+
+#filler10 {
+    grid-column: span 61;
+}
+
+#filler11 {
+    grid-column: span 11;
+}
+
+#filler12 {
+    grid-column: span 36;
+}
+
+#filler13 {
+    grid-column: span 8;
+}
+
+#filler14 {
+    grid-column: span 35;
+}
+
+#filler15 {
+    grid-column: span 16;
+}
+
 /* EVENTS */
 
 
@@ -109,6 +179,37 @@ img {
 
 
 /* RULER */
+:root {
+    --tick-gap: calc(10vw + 1em);
+    --major-gap: calc(50vw + 5em);
+}
+
+        
+.ruler {
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+
+    background-image:
+        /* major ticks */
+        /*repeating-linear-gradient(
+        to right,
+        black 0px,
+        black 3px,
+        transparent 3px,
+        transparent var(--major-gap)
+        ),*/
+
+        /* minor ticks */
+        repeating-linear-gradient(
+        to right,
+        rgb(255, 255, 255) 0px,
+        rgb(255, 255, 255) 2px,
+        transparent 2px,
+        transparent var(--tick-gap)
+        );
+};
 
 .ruler-grid {
     display: grid;
@@ -123,7 +224,7 @@ img {
     bottom: 0;
     width: 1px;
     height: 45px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .ruler-mid::after,
@@ -133,7 +234,7 @@ img {
     bottom: 0;
     width: 1px;
     height: 30px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .ruler-line::before,
@@ -144,7 +245,7 @@ img {
     bottom: 0;
     width: 1px;
     height: 20px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .guideline {
@@ -152,6 +253,6 @@ img {
     left: 50px;
     width: 1px;
     height: 100%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 /* RULER */
