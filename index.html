@@ -190,7 +190,7 @@
                 <div class="year"><h1>12.2000</h1></div>
                 <div class="year"><h1>2001</h1></div>
                 <div class="year"><h1>2010</h1></div>
-                <div class="target" id="present"><h1>2020</h1></div>
+                <div class="year"><h1>2020</h1></div>
                 <div class="target" id="present"><h1>01.2026</h1></div>
                 <div class="target" id="present"><h1>02.2026</h1></div>
                 <div class="target" id="present"><h1>03.2026</h1></div>
@@ -202,7 +202,7 @@
             <div class="event-grid">
                 <!--THE PAST-->
 
-                <div class="box"></div>
+                <div class="target" id="past"></div>
                 <div class="box">
                     <img src="images/capricorn_justinianplague.jpg">
                     <p> Plague of Justinian (541–549): the first episode of the first plague pandemic.</p>
@@ -238,8 +238,6 @@
 
                 <div class="box" id="filler1">
                     <a href="#jumplink1">Jump to next event --></a>
-                    <a href="#jumplink2">Jump to present --></a>
-
                 </div>
 
                 <div class="box">
@@ -247,19 +245,23 @@
                     <p>The Sacking of Lindisfarne (793): The first viking raid.</p>
                 </div>
 
-                <div class="box" id="filler2"></div>
+                <div class="box" id="filler2">
+                    <a href="#jumplink2">Jump to next event --></a>
+                </div>
 
                 <div class="box">
-                    <p>East–West Schism (1054): separation of the Catholic Church and the Eastern Orthodox Church.</p>
+                    <p id="jumplink2">East–West Schism (1054): separation of the Catholic Church and the Eastern Orthodox Church.</p>
 
                     <img src="images/aquarius_sn1054.jpg">
                     <p> SN 1054 The Crab Supernova (07.04.1054): the first recorded supernova.</p>
                 </div>
 
-                <div class="box" id="filler3"></div>
+                <div class="box" id="filler3">
+                    <a href="#jumplink3">Jump to next event --></a>
+                </div>
 
                 <div class="box">
-                    <img src="images/aquarius_edictofexplusion.jpg">
+                    <img src="images/aquarius_edictofexplusion.jpg" id="jumplink3">
                     <p>Edict of Expulsion (1290): Royal decree expelling all Jews from the Kingdom of England.</p>
                 </div>
 
@@ -268,10 +270,12 @@
                     <p>Siege of Acre (1291): the fall of the last crusader states.</p>
                 </div>
 
-                <div class="box" id="filler4"></div>
+                <div class="box" id="filler4">
+                    <a href="#jumplink4">Jump to next event --></a>
+                </div>
 
                 <div class="box">
-                    <img src="images/aries_blackplague.jpg">
+                    <img src="images/aries_blackplague.jpg" id="jumplink4">
                     <p>Black Plague (1346 – 1353)</p>
                 </div>
                 <div class="box">
@@ -296,10 +300,12 @@
                     <img src="images/aries_blackplague.jpg">
                 </div>
 
-                <div class="box" id="filler5"></div>
+                <div class="box" id="filler5">
+                    <a href="#jumplink5">Jump to next event --></a>
+                </div>
 
                 <div class="box">
-                    <p>Shakespeare's Sonnet 123 is published (1609).</p>
+                    <p id="jumplink5">Shakespeare's Sonnet 123 is published (1609).</p>
                 </div>
 
                 <div class="box" id="filler6"></div>
@@ -503,7 +509,7 @@
                 </div>
 
                 <div class="box-stretch">
-                    <p>Y2K (01.01.2000) – THE ALMOST END OF THE WORLD</p>
+                    <h1>Y2K (01.01.2000) – THE ALMOST END OF THE WORLD</h1>
                     <p>150 Delaware Lottery racino slot machines stop working (01.01.2000)</p>
                     <p>AIR TRAFFIC CONTROL SYSTEM IN JAPAN BREAKS! PROBLEM PERSISTS FOR DAYS (01.01.2000)</p>
                     <p>Bus ticket validation system in Australia fail to operate (01.01.2000)</p>
@@ -644,6 +650,7 @@
                 </div>
 
                 <div class="box-stretch">
+                    <img src="images/infinity5.jpg">
                     <p>The Eternal Return is installed in the sixth floor open studio of OCAD University's main building. (02.05.2026)</p>
                 </div>
 
@@ -652,10 +659,12 @@
                 </div>
 
                 <div class="box-stretch">
+                    <img src="images/error-poster-photos.gif">
                     <p>Y2K38 posters spotted across OCAD University's main building (03.09.2026)</p>
                 </div>
 
                 <div class="box-stretch">
+                    <img src="images/error-door.jpg">
                     <p>y2k38.fail site presented in room 650. (03.10.2026)</p>
                 </div>
 
@@ -713,8 +722,8 @@
                     <p>SATELLITES FALL FROM THE SKY! ALL EVIDENCE POINTS TO Y2K38! (01.19.2038)</p>
                 </div>
 
-                <div class="box">
-                    <p>THE END OF THE WORLD (01.19.2038 03:14:08 UTC)</p>
+                <div class="box-stretch">
+                    <h1>THE END OF THE WORLD (01.19.2038 03:14:08 UTC)</h1>
                 </div>
 
 
@@ -725,42 +734,9 @@
     </div>
 
 
-     <script src="js/gsap.min.js"></script>
+    <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/ScrollToPlugin.min .js"></script>
     <script src="js/script.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        const container = document.querySelector(".container");
-
-        gsap.to(container, {
-        x: () => -(container.scrollWidth - window.innerWidth),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".wrapper",
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + container.scrollWidth,
-        }
-        });
-
-        gsap.to(".guideline", {
-            scrollTrigger: {
-                trigger: ".guideline",
-                markers: true,
-
-                start: "top center",
-                end: "bottom 500px",
-                scrub: 1,
-                pin: true,
-                horizontal: true,
-                toggleActions: "restart pause reverse pause",
-            },
-            x: 500,
-            duration: 5
-        });
-    </script>
 </body>
 </html>
