@@ -9,7 +9,7 @@ body {
 
 .wrapper {
     height: 100vh;
-    width: 19000vw;
+    width: 23000vw;
     overflow: hidden;
 }
 
@@ -148,6 +148,26 @@ nav {
     grid-column: span 10;
 }
 
+.year-9 {
+    grid-column: span 9;
+}
+
+.year-6 {
+    grid-column: span 6;
+}
+
+.year-3 {
+    grid-column: span 3;
+}
+
+.year-7 {
+    grid-column: span 7;
+}
+
+.year-11 {
+    grid-column: span 11;
+}
+
 .year-stretch {
     grid-column: span 60;
 }
@@ -159,7 +179,7 @@ nav {
 .event-grid {
     margin-top: 15vh;
     display: grid;
-    grid-template-columns: repeat(2000, 10vw); /* ruler + content */
+    grid-template-columns: repeat(21000, 10vw);
     column-gap: 1em;
 }
 
@@ -238,11 +258,70 @@ img {
     grid-column: span 16;
 }
 
+#filler16 {
+    grid-column: span 40;
+}
+
+#filler17 {
+    grid-column: span 17;
+}
+
+#filler18 {
+    grid-column: span 12;
+}
+
+#filler19 {
+    grid-column: span 65;
+}
+
+#filler20 {
+    grid-column: span 3;
+}
+
+#filler21 {
+    grid-column: span 2;
+}
+
+#filler22 {
+    grid-column: span 4;
+}
+
+#filler23 {
+    grid-column: span 16;
+}
+
+#filler24 {
+    grid-column: span 50;
+}
+
+#filler25 {
+    grid-column: span 46;
+}
+
+#filler26 {
+    grid-column: span 17;
+}
+
+#filler27 {
+    grid-column: span 30;
+}
+
+#filler28 {
+    grid-column: span 32;
+}
+
+#filler29 {
+    grid-column: span 111;
+}
+
+#filler30 {
+    grid-column: span 8;
+}
+
+#filler31 {
+    grid-column: span 34;
+}
 /* EVENTS */
-
-
-
-
 
 /* RULER */
 :root {
@@ -277,11 +356,11 @@ img {
         );
 };
 
-.ruler-grid {
+/*.ruler-grid {
     display: grid;
     grid-template-columns: repeat(100, 100vw);
     column-gap: 10em;
-}
+}*/
 
 .ruler-start::after,
 .ruler-start::before {
