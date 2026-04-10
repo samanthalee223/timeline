@@ -115,7 +115,7 @@ nav {
     list-style-type: none;
 
     display: grid;
-    grid-template-columns: repeat(10, 10vw);
+    grid-template-columns: repeat(7, 10vw);
     column-gap: 1em;
 } 
 
