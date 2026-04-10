@@ -9,7 +9,7 @@
 
     <style>
         .wrapper {
-            width: 1000vw;
+            width: vw;
         }
 
         .research {
@@ -19,7 +19,24 @@
         .outcome {
             grid-column: span 32;
         }
-        
+
+        @media only screen and (max-width:700px) {
+            .wrapper {
+                width: 4000vw;
+            }
+
+            .box-span3 {
+                grid-column: span 3;
+            }
+
+            .research {
+            grid-column: span 13; 
+            }
+
+            .outcome {
+                grid-column: span 28; 
+            }
+        }
     </style>
 </head>
 
@@ -27,11 +44,11 @@
     <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#research">research</a>
-                    <a href="#outcome">outcome</a>
-                    <a href="#process" id="nav-span1">error log</a>
+                    <a href="#research" class="hide">research</a>
+                    <a href="#outcome" class="hide">outcome</a>
+                    <a href="#process" class="hide" id="nav-span1">error log</a>
                     <a href="index.html" class="clock"id="clock"></a>
-                    <a href="eternalreturn.html">the eternal return</a>
+                    <a href="eternalreturn.html" id="long-nav">the eternal return</a>
                     <a href="y2k38.html" class="active">y2k38.fail</a>
                 </div>
             </nav>
@@ -43,7 +60,6 @@
                 <div class="research" id="research"><h1>Research</h1></div>
                 <div class="outcome" id="outcome"><h1>Outcome</h1></div>
                 <div class="process" id="process"><h1>Error Log</h1></div>
-                
             </div>
 
             <div class="event-grid">
@@ -759,6 +775,13 @@
             <div class="ruler"></div>
         </div>
     </div>
+
+     <div class="bot-nav-wrapper">
+                <div class="bottom-nav">
+                    <a href="#research">research</a>
+                    <a href="#outcome">outcome</a>
+                    <a href="#process">error log</a>
+            </div>
 
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>

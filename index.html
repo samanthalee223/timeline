@@ -6,17 +6,23 @@
     <title>The Timeline</title>
     
       <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            
+
+        </style>
+
 </head>
 <body>
 
     <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#past">past</a>
-                    <a href="#present">present</a>
-                    <a href="#future" id="nav-span1">future</a>
+                    <a href="#past" class="hide">past</a>
+                    <a href="#present" class="hide">present</a>
+                    <a href="#future" class="hide" id="nav-span1">future</a>
                     <a href="index.html" class="clock"id="clock"></a>
-                    <a href="eternalreturn.html">the eternal return</a>
+                    <a href="eternalreturn.html" id="long-nav">the eternal return</a>
                     <a href="y2k38.html">y2k38.fail</a>
                 </div>
             </nav>
@@ -244,7 +250,7 @@
                 </div>
 
                 <div class="box" id="filler1">
-                    <a href="#jumplink1">Jump to next event →</a>
+                    <a href="#jumplink1" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 1-->
                 <div class="box-stretch">
@@ -278,7 +284,7 @@
                 </div>
 
                 <div class="box" id="filler2">
-                    <a href="#jumplink2">Jump to next event →</a>
+                    <a href="#jumplink2" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 2-->
                 <div class="box-stretch">
@@ -309,7 +315,7 @@
                 </div>
 
                 <div class="box" id="filler3">
-                    <a href="#jumplink3">Jump to next event →</a>
+                    <a href="#jumplink3" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 3-->
                 <div class="box-stretch">
@@ -348,7 +354,7 @@
                 </div>
 
                 <div class="box" id="filler4">
-                    <a href="#jumplink4">Jump to next event →</a>
+                    <a href="#jumplink4" class="jumplink">Jump to next event →</a>
                 </div>
 
                 <div class="box">
@@ -378,7 +384,7 @@
                 </div>
 
                 <div class="box" id="filler5">
-                    <a href="#jumplink5">Jump to next event →</a>
+                    <a href="#jumplink5" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 4-->
                 <div class="box-stretch">
@@ -431,7 +437,7 @@
                 </div>
 
                 <div class="box" id="filler7">
-                     <a href="#jumplink6">Jump to next event →</a>
+                     <a href="#jumplink6" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 5-->
                 <div class="box-stretch">
@@ -544,7 +550,7 @@
                 </div>
 
                 <div class="box" id="filler10">
-                    <a href="#jumplink7">Jump to next event →</a>
+                    <a href="#jumplink7" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 6-->
                 <div class="box-stretch">
@@ -582,7 +588,7 @@
                 </div>
 
                 <div class="box" id="filler12">
-                    <a href="#jumplink8">Jump to next event →</a>
+                    <a href="#jumplink8" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 7-->
                     <div class="box-span3">
@@ -654,7 +660,7 @@
                 </div>
 
                 <div class="box" id="filler14">
-                    <a href="#jumplink9">Jump to next event →</a>
+                    <a href="#jumplink9" class="jumplink">Jump to next event →</a>
                 </div>
                 <!--filler event 8-->
                 <div class="box-span3">
@@ -963,8 +969,15 @@
             </div>
        
             <div class="ruler"></div>
+            </div>
         </div>
     </div>
+    <div class="bot-nav-wrapper">
+                <div class="bottom-nav">
+                    <a href="#past">past</a>
+                    <a href="#present">present</a>
+                    <a href="#future">future</a>
+            </div>
 
 
     <script src="js/gsap.min.js"></script>

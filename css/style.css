@@ -81,19 +81,25 @@ p {
     margin-bottom: 10px;
 }
 
+.jumplink {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
 @media only screen and (max-width:700px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     h2 {
         font-size: 1.25rem;
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
@@ -115,7 +121,7 @@ nav {
     list-style-type: none;
 
     display: grid;
-    grid-template-columns: repeat(7, 10vw);
+    grid-template-columns: repeat(10, 10vw);
     column-gap: 1em;
 } 
 
@@ -148,7 +154,66 @@ nav {
     text-decoration: underline dotted;
 }
 
+/*@media only screen and (max-width:500px) {
+    .nav-wrapper {
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
+    .clock {
+        grid-column: span 4;
+        text-align: center;
+    }
+
+    #nav-span1 {
+        grid-column: span 1;
+    }
+
+    #long-nav {
+        grid-column: span 3;
+
+    }
+}*/
+
+.bot-nav-wrapper {
+    display: hidden;
+}
+
+@media only screen and (max-width:500px) {
+    .bot-nav-wrapper {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        bottom: 0;
+        background-color: rgb(15, 15, 15);
+    }
+
+    .bottom-nav {
+     
+        display: grid;
+        grid-template-columns: repeat(3,33vw);
+        column-gap: 1em;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .nav-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: right;
+        row-gap: 5px;
+    }
+
+    .clock {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+            
+}
 
 /* NAVIGATION BAR */
 
@@ -201,6 +266,7 @@ nav {
 
 @media only screen and (max-width:500px) {
     .year-grid {
+        margin-top: 12vh;
         grid-template-columns: repeat(3000, 40vw);
     }
 }
@@ -438,13 +504,7 @@ img {
 /* RULER */
 :root {
     --tick-gap: calc(10vw + 1em);
-}
-
-@media only screen and (max-width:500px) {
-    :root {
-        --tick-gap: calc(40vw + 1em);
-    }
-}        
+}     
 .ruler {
     bottom: 0;
     height: 30px;
@@ -501,6 +561,16 @@ img {
     height: 20px;
     background-color: rgb(255, 255, 255);
 }
+
+@media only screen and (max-width:500px) {
+    :root {
+        --tick-gap: calc(40vw + 1em);
+    }
+
+    .ruler {
+        height: 45px;
+    }
+}   
 
 .guideline {
     position: absolute;
