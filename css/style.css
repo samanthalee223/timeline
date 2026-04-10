@@ -181,7 +181,7 @@ nav {
     display: hidden;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:700px) {
     .bot-nav-wrapper {
         position: fixed;
         z-index: 1000;
@@ -191,10 +191,10 @@ nav {
     }
 
     .bottom-nav {
-     
         display: grid;
         grid-template-columns: repeat(3,33vw);
         column-gap: 1em;
+        text-align: center;
     }
 
     .hide {
@@ -209,8 +209,10 @@ nav {
     }
 
     .clock {
+        left:0;
         grid-column: span 1;
         grid-row: span 2;
+        text-align: left;
     }
             
 }
@@ -562,7 +564,7 @@ img {
     background-color: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:700px) {
     :root {
         --tick-gap: calc(40vw + 1em);
     }
