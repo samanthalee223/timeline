@@ -9,8 +9,17 @@
 
     <style>
         .wrapper {
-            width: 550vw;
+            width: 1000vw;
         }
+
+        .research {
+            grid-column: span 14;
+        }
+
+        .outcome {
+            grid-column: span 32;
+        }
+        
     </style>
 </head>
 
@@ -20,7 +29,7 @@
                 <div class="nav-wrapper">
                     <a href="#research">research</a>
                     <a href="#outcome">outcome</a>
-                    <a href="#process" id="nav-span1">process</a>
+                    <a href="#process" id="nav-span1">error log</a>
                     <a href="index.html" class="clock"id="clock"></a>
                     <a href="eternalreturn.html">the eternal return</a>
                     <a href="y2k38.html" class="active">y2k38.fail</a>
@@ -31,9 +40,9 @@
     <div class="wrapper">
         <div class="container">
             <div class="year-grid">
-                <div class="year" id="research"><h1>Research</h1></div>
-                <div class="year" id="outcome"><h1>Outcome</h1></div>
-                <div class="year" id="process"><h1>Process</h1></div>
+                <div class="research" id="research"><h1>Research</h1></div>
+                <div class="outcome" id="outcome"><h1>Outcome</h1></div>
+                <div class="process" id="process"><h1>Error Log</h1></div>
                 
             </div>
 
@@ -66,6 +75,8 @@
                     <h3 class="error-h3">4. take something exceedingly rare and make it seem like it is happening everywhere all at once</h3>
 
                 </div>
+
+                <!--Outcome-->
 
                 <div class="box"></div>
 
@@ -119,7 +130,630 @@
                     <p>y2k38.fail site presented in room 650. (03.10.2026)</p>
                 </div>
 
+                <!--Process-->
+                <div class="box"></div>
 
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                    <p>Trial: const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+                        const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+                        // notation: Date.UTC(year, monthIndex, day, hours, minutes, seconds)
+
+                        console.log(utcDate1.toUTCString());
+                        // Expected output: ""Fri, 02 Feb 1996 03:04:05 GMT""
+
+                        console.log(utcDate2.toUTCString());
+                        // Expected output: ""Sun, 31 Dec 1899 00:00:00 GMT""</p>
+                    <p>Error: Static clock</p>
+                    <p>Date: 02.23.2026 17:35 PST</p>
+                </div>
+
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>Trial: ""Math.floor((new Date()).getTime() / 1000); console.log((new Date()));""</p>
+                <p>Error: Console log: Mon Feb 23 2026 17:35:27 GMT-0800 (Pacific Standard Time)</p>
+                    <p>Date: 02.23.2026 17:35 PST</p>
+                </div>
+
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""function updateClock() {
+                    const now = new Date();
+                    // Specify the target time zone using the IANA time zone identifier (e.g., 'America/New_York')
+                    const options = {
+                        timeZone: 'America/New_York', // removing this makes the clock auto sync to computer's timezone
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        second: 'numeric',
+                        hour12: false // Set to false for 24-hour format
+                    };
+                    
+                    // Format the time string
+                    const timeString = now.toLocaleString('en-US', options);
+
+                    // Update the HTML element
+                    document.getElementById('txt').textContent = timeString + """" """" + """"EST"""";
+                    }
+
+                    // Update the clock immediately on page load
+                    updateClock();
+
+                    // Update the clock every second (1000 milliseconds)
+                    setInterval(updateClock, 1000);""</p>
+                <p>Error: Using local timezones, not UTC</p>
+                    <p>Date: 02.23.2026 17:53 PST</p>
+                </div>
+
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""updateClock(
+                        const now = new Date(Date.UTC());
+                    )""</p>
+                <p>Error/Result: invalid function formatting</p>
+                    <p>Date: 02.23.2026 17:56 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""const now = new Date(Date.UTC());
+
+                console.log(now.toUTCString());""</p>
+                <p>Error/Result: Console log: Invalid Date</p>
+                    <p>Date: 02.23.2026 17:59 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>const event = new Date('February 23, 2026 18:24:00');
+                    console.log(event.toUTCString());</p>
+                <p>Error/Result: static, converting local time to UTC using toUTCString()</p>
+                    <p>Date: 02.23.2026 18:15 PST</p>
+                </div>
+
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                    <p>const now = Date.now();
+                    console.log(now);;</p>
+                    <p>Error/Result: Console log: 1771899696747</p>
+                        <p>Date: 02.23.2026 18:22 PST</p>
+                </div>
+
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>function testClock() {
+                    Math.floor((new Date()).getTime() / 1000); 
+                    };
+
+                    console.log('testCLock()');</p>
+                <p>Error/Result: Console log: testCLock()</p>
+                    <p>Date: 02.23.2026 18:34 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>function updateClock() {
+                    const now = new Date();
+                    // Specify the target time zone using the IANA time zone identifier (e.g., 'America/New_York')
+                    const options = {
+                        timeZone: 'UTC', // removing this makes the clock auto sync to computer's timezone
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        second: 'numeric',
+                        hour12: false // Set to false for 24-hour format
+                    };
+                    
+                    // Format the time string
+                    const timeString = now.toLocaleString('en-US', options);
+
+                    // Update the HTML element
+                    document.getElementById('txt').textContent = timeString + "" "" + ""UTC"";
+                }
+
+                // Update the clock immediately on page load
+                updateClock();
+
+                // Update the clock every second (1000 milliseconds)
+                setInterval(updateClock, 1000);</p>
+                    <p>Date: 02.23.2026 18:43 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""function updateClock() {
+                    const now = new Date();
+                    
+                    // Format the time string
+                    const timeString = now.toUTCString();
+
+                    // Update the HTML element
+                    document.getElementById('txt').textContent = timeString;
+                }
+
+                // Update the clock immediately on page load
+                updateClock();
+
+                // Update the clock every second (1000 milliseconds)
+                setInterval(updateClock, 1000);""</p>
+                <p>Error/Result: No Error: live UTC clock</p>
+                    <p>Date: 02.23.2026 18:50 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""// LIVE UTC CLOCK + DECIMAL
+                    function updateClock() {
+                        const now = new Date();
+                        
+                        // Format the time string
+                        const timeString = now.toUTCString();
+                        const decimal = Date.now();
+
+                        // Update the HTML element
+                        document.getElementById('txt').textContent = timeString;
+                        document.getElementById('txt2').textContent = decimal;
+                    }
+
+                    // Update the clock immediately on page load
+                    updateClock();
+
+                    // Update the clock every second (1000 milliseconds)
+                    setInterval(updateClock, 1000);
+
+                    // ""</p>
+                <p>Error/Result: No Error</p>
+                    <p>Date: 02.23.2026 19:02 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""document.getElementById('liveCLock').textContent = timeString;     < div id=""""liveClock"""" >< /div >
+                    ""</p>
+                <p>Error/Result: Spelling Error</p>
+                    <p>Date: 02.23.2026 19:13 PST</p>
+                </div>
+                <div class="box">
+                <p>Feature: Clock Display</p>
+                <p>""const start = Date.now();
+                    const end = new Date('2038-01-19T03:14:07');
+                    console.log(end.toUTCString);""</p>
+                    <p>Date: 02.23.2026 19:27 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>const start = Date.now();
+                    const end = new Date('2038-01-19T03:14:07');
+                    console.log(end.toUTCString());</p>
+                <p>Error/Result: Console log: Tue, 19 Jan 2038 11:14:07 GMT</p>
+                    <p>Date: 02.23.2026 19:28 PST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""setTimeout(() => {
+                    const ms = end - new Date();
+                    // calculate difference between Y2038 and now
+
+                    console.log(`seconds remaining = ${Math.floor(ms / 1000)}`);
+                    }, 1000);""</p>
+                    <p>Date: 02.24.2026 10:20 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Clock Display</p>
+                <p>""// LIVE UTC CLOCK + DECIMAL
+                    function updateClock() {
+                        const now = new Date();
+                        
+                        // Format the time string
+                        const timeString = now.toUTCString();
+                        const timeLocalString = now.toLocaleString();
+                        const decimal = Date.now();
+
+                        const start = Date.now();
+                        const end = new Date('2038-01-19T03:14:07');
+                        const ms = end - new Date();
+
+                        // Update the HTML element
+                        document.getElementById('liveClock').textContent = timeString;
+                        document.getElementById('liveLocalClock').textContent = 'Local Time: ' + timeLocalString;
+                        document.getElementById('liveDecimal').textContent = Math.floor(decimal / 1000) + ' / 2147483647 seconds until Y2038';
+                        document.getElementById('liveDecimal2').textContent = Math.floor(ms / 1000) + ' seconds left';
+                    }""</p>
+                    <p>Date: 02.26.2026 15:07 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""function convertSeconds(seconds) {
+                    const date = new Date(seconds * 1000);
+                    const years = Math.floor(seconds / (365 * 24 * 60 * 60));
+                    const days = date.getUTCDate() - 1;
+                    const hours = date.getUTCHours();
+                    const minutes = date.getUTCMinutes();
+                    const remainingSeconds = date.getUTCSeconds();
+
+                    return `${years} years, ${days} days, ${hours} hours, ${minutes} minutes and ${remainingSeconds} seconds`;
+                }
+
+                console.log(convertSeconds(5454776657));""</p>
+                <p>Error/Result: Console log: 172 years, 7 days, 23 hours, 44 minutes and 17 seconds</p>
+                    <p>Date: 02.26.2026 16:38 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""// Set the date we're counting down to Jan 19, 2038 03:14:07 UTC
+                    var countDownDate = new Date(""""Jan 19, 2038 03:14:07 UTC"""").getTime();
+
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+                        // Get today's date and time
+                        var now = new Date().getTime();
+                            
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+                            
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            
+                        // Output the result in an element with id=""""demo""""
+                        document.getElementById(""""demo"""").innerHTML = days + """"d """" + hours + """"h """"
+                        + minutes + """"m """" + seconds + """"s """";
+                            
+                        // If the count down is over, write some text 
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById(""""demo"""").innerHTML = """"THE WORLD HAS ENDED"""";
+                        }
+                    }, 1000);""</p>
+                    <p>Date: 02.26.2026 16:52 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>var countDownDate = new Date('2026-02-26T023:14:07').getTime();</p>
+                <p>Error/Result: Returned: NaNy NaNd NaNh NaNs, Error: Invalid date format</p>
+                    <p>Date: 02.26.2026 17:04 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""if (distance < 0) {
+                    clearInterval(updateClock);
+                    document.getElementById(""""demo"""").innerHTML = """"THE WORLD HAS ENDED"""";
+                    }""</p>
+                <p>Error/Result: Message not working, displaying negative values instead.</p>
+                    <p>Date: 02.26.2026 17:12 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""onst x = setInterval(function() {
+                    const now = new Date();
+
+                    // Format the time string
+                    const timeString = now.toUTCString();
+                    const timeLocalString = now.toLocaleString();
+                    const decimal = Date.now();
+
+                    //set countdown date to Jan 19, 2038 03:14:07 UTC / 2038-01-19T03:14:07
+                    const end = new Date('2038-01-19T03:14:07').getTime();
+                    const distance = end - new Date();
+
+                    // Time calculations for days, hours, minutes and seconds
+                    const years = Math.floor(distance / (365 * 1000 * 60 * 60 * 24));
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Update the HTML element
+                    document.getElementById('liveClock').textContent = timeString;
+                    document.getElementById('liveLocalClock').textContent = 'Local Time: ' + timeLocalString;
+                    document.getElementById('liveDecimal').textContent = Math.floor(decimal / 1000) + ' / 2147483647 seconds';
+                    document.getElementById('liveDecimal2').textContent = Math.floor(distance / 1000) + ' seconds to Y2038';
+                    document.getElementById('demo').innerHTML = years + """"y """" + days + """"d """" + hours + """"h """" + minutes + """"m """" + seconds + """"s """";
+
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById('demo').innerHTML = """"THE WORLD HAS ENDED"""";
+                    }
+                }, -1000);""</p>
+                    <p>Date: 02.26.2026 17:22 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""        .incidents {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-auto-rows: 100px;
+                        gap: -1px;
+                    }
+                    .incidents div:nth-child(2) {
+                        grid-column: 3;
+                        grid-row: 2 / 4;
+                    }
+                    .incidents div:nth-child(5) {
+                        grid-column: 1 / 3;
+                        grid-row: 1 / 3;
+                    }""</p>
+                <p>Error/Result:</p>
+                    <p>Date: 03.01.2026 00:03 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>"" < div class=""""incidents"""" >
+                        < div class=""""event-1x2"""" >
+                            < div class=""""tab"""" >
+                                < div class=""""incident-source"""" >
+                                    < a href=""""error.html"""">↗</a >
+                                < /div >
+                            < /div >
+                            < h3 >If you don’t know what the Y2038 problem is: it will make Y2K look like a walk in the park (and Y2K was not that) If you don’t know what the Y2038 problem is: it will make Y2K look like a walk in the park (and Y2K was not that)< /h3 >
+                    < /div >""</p>
+                    <p>Date: 03.01.2026 00:15 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>"".incidents {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-auto-rows: 2fr;
+                    gap: -1px;
+                    grid-auto-flow: row dense;
+
+                    margin: 0 1%;
+                }
+
+                .incidents div {
+                    border-style: dotted;
+                    border-width: 0.1px;
+                    border-color: white;
+                    overflow-x: scroll;
+                }
+            
+                .incidents .event-1x2 {
+                    grid-column: span 2;
+                    
+                }
+
+                p {
+                    padding:5px;
+                }
+
+                .tab {
+                    position: sticky;
+                    top: 0;
+
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    background-color: rgba(3, 32, 200, 1);;
+                }
+
+                .tab .incident-source {
+                    text-align: center;
+                    height: 0;
+                    width: 23px;
+                    padding-bottom: 23px;
+                }""</p>
+                <p>Error/Result:</p>
+                    <p>Date: 03.01.2026 00:15 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>"".incidents {
+                    --items: 12;
+                    --item1-order: 1;
+                    --item2-order: 1;
+                    --item3-order: 1;
+                    --item4-order: 1;
+                    --item5-order: 1;
+                    --item6-order: 1;
+                    --item7-order: 1;
+                    --item8-order: 1;
+                    --item9-order: 1;
+                    --item10-order: 1;
+                    --item11-order: 1;
+                    --item12-order: 0;
+
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-auto-rows: 2fr;
+                    gap: -1px;
+                    grid-auto-flow: row dense;
+
+                    margin: 0 1%;
+                }
+
+                #1 { order: var(--item1-order); }
+                #2 { order: var(--item2-order); }
+                #3 { order: var(--item3-order); }
+                #4 { order: var(--item4-order); }
+                #5 { order: var(--item1-order); }
+                #6 { order: var(--item2-order); }
+                #7 { order: var(--item3-order); }
+                #8 { order: var(--item4-order); } 
+                #9 { order: var(--item1-order); }
+                #10 { order: var(--item2-order); }
+                #11 { order: var(--item3-order); }
+                #12 { order: var(--item4-order); } ""</p>
+                <p>Error/Result: SEE BELOW</p>
+                    <p>Date: 03.01.2026 01:34 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""        let root = document.querySelector('#incidents');
+                let itemcount = getComputedStyle(root).
+                    getPropertyValue('--items');
+                let old = 1;
+                const shuffleorder = () => {
+                    let random = Math.floor(Math.random() * itemcount) + 1;
+                    root.style.setProperty('--item' + old + '-order', 1);
+                    root.style.setProperty('--item' + random + '-order', 0);
+                    old = random;
+                };
+                shuffleorder();""</p>
+                <p>Error/Result: DID NOT SHUFFLE</p>
+                    <p>Date: 03.01.2026 01:35 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""        let root = document.querySelector('#incidents');
+                let itemcount = getComputedStyle(root).
+                    getPropertyValue('--items');
+                let old = 1;
+                const shuffleorder = () => {
+                    let random = Math.floor(Math.random() * itemcount) + 1;
+                    root.style.setProperty('--item' + old + '-order', 1);
+                    root.style.setProperty('--item' + random + '-order', 0);
+                    old = random;
+                };
+                shuffleorder();""</p>
+                <p>Error/Result: DID NOT SHUFFLE</p>
+                    <p>Date: 03.01.2026 01:35 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""        const incident = document.querySelectorAll('.event');
+                    const arr1 = Array.from(incident);
+
+                    function shuffle(array) {
+                        let currentIndex = array.length;
+
+                        // While there remain elements to shuffle...
+                        while (currentIndex != 0) {
+
+                            // Pick a remaining element...
+                            let randomIndex = Math.floor(Math.random() * currentIndex);
+                            currentIndex--;
+
+                            // And swap it with the current element.
+                            [array[currentIndex], array[randomIndex]] = [
+                            array[randomIndex], array[currentIndex]];
+                        }
+                    }
+                    shuffle(arr1);""""</p>
+                <p>Error/Result: Console log shuffled, grid items did not.</p>
+                    <p>Date: 03.01.2026 01:53 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""const grid = document.querySelectorAll('#incident');
+                    const events = document.querySelectorAll('.event');
+                    const items = Array.from(grid);
+
+                    // Do the actual shuffling
+                        for(let i = items.length; i >= 0; i--) {
+                            grid.appendChild(grid.children[Math.random() * i | 0]);
+                        }
+                    console.log(items);""</p>
+                    <p>Date: 03.01.2026 02:11 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""        document.addEventListener(""""DOMContentLoaded"""", () => {
+                    const grid = document.getElementById('#incident');
+                    // Convert HTML elements to array
+                    const events = Array.from(grid.children);
+
+                    // Fisher-Yates shuffle
+                    for (let i = items.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [items[i], items[j]] = [items[j], items[i]];
+                    }
+
+                    // Remove all items
+                    grid.innerHTML = """""""";
+
+                    // Re-add in shuffled order
+                    items.forEach(item => grid.appendChild(item));
+                });""</p>
+                <p>Error/Result: const grid = document.getElementById('#incident'); <-- wrong Id name, use of hashtag</p>"
+                    <p>Date: 03.01.2026 02:23 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Incident Grid</p>
+                <p>""document.addEventListener(""""DOMContentLoaded"""", () => {
+                    const grid = document.getElementById('incidents');
+                    // Convert HTML elements to array
+                    const events = Array.from(grid.children);
+
+                    // Fisher-Yates shuffle
+                    for (let i = events.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [events[i], events[j]] = [events[j], events[i]];
+                    }
+
+                    // Remove all items
+                    grid.innerHTML = """""""";
+
+                    // Re-add in shuffled order
+                    events.forEach(item => grid.appendChild(item));
+                });""</p>
+                <p>Error/Result: Grid items shuffle</p>
+                    <p>Date: 03.01.2026 02:56 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24));</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:38 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>const days = Math.floor(distance / (1000 * 60 * 60 * 24) / (365 * 1000 * 60 * 60));</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:41 EST</p>
+                </div>
+                <div class="box">
+                <p>Feature: Countdown</p>
+                <p>const days = Math.floor(distance / (1000 * 60 * 60 * 24) / (365));</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:41 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (365));
+                    const hours = Math.floor((distance % ( 365 * 1000 * 60 * 60 * 24)) / ( 365 * 1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (365 * 1000 * 60 * 60)) / (365 * 1000 * 60));""</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:50 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (365));
+                    const hours = Math.floor((distance % ( 365 * 1000 * 60 * 60 * 24)) / ( 365 * 1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (365 * 1000 * 60 * 60)) / (365 * 1000 * 60));""</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:50 EST</p>
+                </div>
+                <div class="box">
+                <p>Feature: Countdown</p>
+                <p>""const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (365 * 1000 * 60 * 60));
+                    const hours = Math.floor((distance % ( 365 * 1000 * 60 * 60)) / ( 365 * 1000 * 60));
+                    const minutes = Math.floor((distance % (365 * 1000 * 60)) / (365 * 1000));
+                    const seconds = Math.floor((distance % (365 * 1000)) / 1000);""</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:51 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (24 * 60 * 60 * 1000));</p>
+                <p>Error/Result: Countdown calculation error</p>
+                    <p>Date: 03.02.2026 23:54 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>""const years = Math.floor(distance / (365 * 1000 * 60 * 60 * 24));
+                    const days = Math.floor((distance % (365 * 1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);""</p>
+                <p>Error/Result: Error fixed</p>
+                    <p>Date: 03.02.2026 23:58 EST</p>
+                </div>
+                <div class="box">
+                    <p>Feature: Countdown</p>
+                <p>const end = new Date('2038-01-19T03:14:07Z').getTime();</p>
+                <p>Error/Result: Convert to UTC timezone</p>
+                    <p>Date: 03.03.2026 00:05 EST</p>
+                </div>
+
+
+                
             </div>
 
             <div class="ruler"></div>

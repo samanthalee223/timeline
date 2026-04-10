@@ -198,33 +198,89 @@ img {
     padding-bottom: 10px;
 }
 
-#filler1 {
-    grid-column: span 243;
+#filler1 { /* total = 243 - 10*/
+    grid-column: span 78;
+}
+#filler1-2 {
+    grid-column: span 77;
+}
+#filler1-3 {
+    grid-column: span 77;
 }
 
-#filler2 {
-    grid-column: span 260;
+#filler2 { /* total = 260 - 8*/
+    grid-column: span 63;
+}
+#filler2-1 {
+    grid-column: span 63;
+}
+#filler2-2 {
+    grid-column: span 63;
+}
+#filler2-3 {
+    grid-column: span 63;
 }
 
-#filler3 {
-    grid-column: span 235;
+#filler3 { /* total = 235 - 12*/
+    grid-column: span 44;
+}
+#filler3-1 {
+    grid-column: span 44;
+}
+#filler3-2 {
+    grid-column: span 45;
+}
+#filler3-3 {
+    grid-column: span 45;
+}
+#filler3-4 {
+    grid-column: span 45;
 }
 
 #filler4 {
     grid-column: span 54;
 }
 
-#filler5  {
-    grid-column: span 255;
+#filler5  { /* total = 255 - 14*/
+    grid-column: span 40;
 }
+#filler5-1  {
+    grid-column: span 40;
+}
+#filler5-2  {
+    grid-column: span 40;
+}
+#filler5-3  {
+    grid-column: span 41;
+}
+#filler5-4  {
+    grid-column: span 41;
+}
+#filler5-5  {
+    grid-column: span 41;
+}
+
 
 #filler6 {
     grid-column: span 9;
 }
 
-#filler7 {
-    grid-column: span 151;
+#filler7 { /* total = 151 - 12 = 139*/
+    grid-column: span 27;
 }
+#filler7-1 {
+    grid-column: span 28;
+}
+#filler7-2 {
+    grid-column: span 28;
+}
+#filler7-3 {
+    grid-column: span 28;
+}
+#filler7-4 {
+    grid-column: span 28;
+}
+
 
 #filler8 {
     grid-column: span 3;
@@ -234,24 +290,36 @@ img {
     grid-column: span 5;
 }
 
-#filler10 {
-    grid-column: span 61;
+#filler10 { /* total = 61 - 2 = 59*/
+    grid-column: span 29;
+}
+#filler10-1 {
+    grid-column: span 30;
 }
 
 #filler11 {
     grid-column: span 11;
 }
 
-#filler12 {
-    grid-column: span 36;
+#filler12 { /* total = 36 - 4*/
+    grid-column: span 16;
+}
+#filler12-1 {
+    grid-column: span 16;
 }
 
 #filler13 {
     grid-column: span 8;
 }
 
-#filler14 {
-    grid-column: span 35;
+#filler14 { /* total = 35 - 6*/
+    grid-column: span 9;
+}
+#filler14-1 { 
+    grid-column: span 10;
+}
+#filler14-2 { 
+    grid-column: span 10;
 }
 
 #filler15 {
@@ -320,6 +388,10 @@ img {
 
 #filler31 {
     grid-column: span 34;
+}
+
+#filler-final {
+    grid-column: span 70;
 }
 /* EVENTS */
 

@@ -50,24 +50,27 @@ gsap.to(container, {
   }
 });
 
-
 const st = ScrollTrigger.getById("horizontalScroll");
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const targetId = link.getAttribute("href");
-    const target = document.querySelector(targetId);
-
+    const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
 
-    const offset = target.offsetLeft;
+    // Get position relative to container
+    const totalWidth = container.scrollWidth - window.innerWidth;
+    const targetX = target.offsetLeft;
+
+    // Convert to ScrollTrigger progress (0 → 1)
+    const progress = targetX / totalWidth;
+
+    // Convert progress → vertical scroll position
+    const scrollY = st.start + progress * (st.end - st.start);
 
     gsap.to(window, {
-      scrollTo: {
-        y: st.start + offset
-      },
+      scrollTo: { y: scrollY },
       duration: 1,
       ease: "power2.inOut"
     });
