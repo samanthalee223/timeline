@@ -13,6 +13,15 @@ body {
     overflow: hidden;
 }
 
+@media only screen and (max-width:400px) {
+    .wrapper {
+        height: 100vh;
+        width: 90000vw;
+        overflow: hidden;
+    }   
+}
+
+
 /* TYPOGRAPHY */
 
 h1 {
@@ -140,7 +149,7 @@ nav {
 .year-grid{
     margin-top: 8vh;
     display: grid;
-    grid-template-columns: repeat(3000, 10vw); /* ruler + content */
+    grid-template-columns: repeat(3000, 10vw);
     column-gap: 1em;
 }
 
@@ -171,6 +180,13 @@ nav {
 .year-stretch {
     grid-column: span 60;
 }
+
+
+@media only screen and (max-width:400px) {
+    .year-grid {
+        grid-template-columns: repeat(3000, 40vw);
+    }
+}
 /* YEAR */
 
 
@@ -181,6 +197,12 @@ nav {
     display: grid;
     grid-template-columns: repeat(21000, 10vw);
     column-gap: 1em;
+}
+
+@media only screen and (max-width:400px) {
+    .event-grid {
+        grid-template-columns: repeat(21000, 40vw);
+    }
 }
 
 .box-stretch {
@@ -398,10 +420,13 @@ img {
 /* RULER */
 :root {
     --tick-gap: calc(10vw + 1em);
-    --major-gap: calc(50vw + 5em);
 }
 
-        
+@media only screen and (max-width:400px) {
+    :root {
+        --tick-gap: calc(40vw + 1em);
+    }
+}        
 .ruler {
     bottom: 0;
     height: 30px;
@@ -427,12 +452,6 @@ img {
         transparent var(--tick-gap)
         );
 };
-
-/*.ruler-grid {
-    display: grid;
-    grid-template-columns: repeat(100, 100vw);
-    column-gap: 10em;
-}*/
 
 .ruler-start::after,
 .ruler-start::before {
