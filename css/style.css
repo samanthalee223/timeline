@@ -13,7 +13,7 @@ body {
     overflow: hidden;
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
     .wrapper {
         height: 100vh;
         width: 90000vw;
@@ -76,8 +76,25 @@ a:hover {
 }
 
 p {
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width:700px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    a {
+        font-size: 0.9rem;
+    }
 }
 
 /* TYPOGRAPHY */
@@ -182,7 +199,7 @@ nav {
 }
 
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
     .year-grid {
         grid-template-columns: repeat(3000, 40vw);
     }
@@ -199,8 +216,9 @@ nav {
     column-gap: 1em;
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
     .event-grid {
+        margin-top: 10vh;
         grid-template-columns: repeat(21000, 40vw);
     }
 }
@@ -422,7 +440,7 @@ img {
     --tick-gap: calc(10vw + 1em);
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:500px) {
     :root {
         --tick-gap: calc(40vw + 1em);
     }

@@ -12,14 +12,30 @@
             width: 750vw;
         }
 
-
-
         .research {
             grid-column: span 11; 
         }
 
         .outcome {
             grid-column: span 37; 
+        }
+
+        @media only screen and (max-width:700px) {
+            .wrapper {
+                width: 3100vw;
+            }
+
+            .box-span3 {
+                grid-column: span 3;
+            }
+
+            .research {
+            grid-column: span 10; 
+            }
+
+            .outcome {
+                grid-column: span 32; 
+            }
         }
 
     </style>
